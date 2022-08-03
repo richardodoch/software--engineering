@@ -1,13 +1,19 @@
+import com.sun.jdi.LocalVariable;
+import jdk.internal.icu.lang.UCharacterDirection;
+
 import java.awt.event.InputEvent;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
+
+
 class Event{
 
     private int eventId;
 
-    private String eventName;
 
+    private String eventName;
+private String i;
     private String eventDate;
+    private String id;
 
     public Event(int eventId,String eventName, String eventDate){
 
@@ -35,11 +41,25 @@ class Event{
     }
 
 
+    public String getId() {
+        return getId();
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String replace() {
+      return null;
+    }
 }
 
 
 public class EventMS {
 
+
+    private static String remove;
+    private static Iterator<Event> i;
 
     public static void main(String[] args) {
 
@@ -49,6 +69,7 @@ public class EventMS {
 
         Event e3 = new Event(3, "Birthday Event", "10.03.2022");
 
+ boolean found =false;
         System.out.println(e1);
         System.out.println(e2);
         System.out.println(e3);
@@ -105,18 +126,74 @@ public class EventMS {
                     }
 //Edit an event
             case "3":
-                System.out.println("what would you want to update?");
-                break;
+                System.out.println("list of event");
+                int event = s1.nextInt();
+
+                System.out.println("list an individual event");
+                String ename = s1.nextLine();
+
+                System.out.println("edit an event");
+
+                System.out.println("delete an event");
+                 event = s1.nextInt();
+
+
+                 break;
+
+                    case "4":
+                    case "5":
+                        System.out.println("Enter Attendee ID:");
+                        int id = s1.nextInt();
+                        System.out.println("Enter Attendee Name");
+                        String name = s1.next();
+                        System.out.println("Enter Attendee Age");
+                        int age = s1.nextInt();
+                        System.out.println("Enter Attendee E");
+                        String Eventattend =s1.next();
+
+                       //events .add(new Event(id,name,age,Eventattend));
+
+
+                        break;
+
+                    case 7:
+
+                        boolean found = false;
+
+                        System.out.println("Enter Attendee ID to Delete:");
+                        id =s1.nextInt();
+                        System.out.println("--------");
+
+
+                                }
+                    }
+
+
+                 break;
+
+
+                }
+
+
+
+
 
                 ///////////////
-                /*Scanner scanner = new Scanner(System.in);
+                *Scanner scanner = new Scanner(/System.in);
                 ///
                 System.out.println("Welcome to my app, choose one option:\n1)List all the event\n2)List one event\n3)Edit event\n4)Delete event\n5)List all the attendees attending a specific event\n6)Add an attendee to an event\n7)Delete an attendee from an event\nWrite \"close\" to terminate the programme");
                 System.out.println("==============");
                 String inputText = scanner.nextLine().toLowerCase();
                 System.out.println("==============");
                 ///
-                try{
+                try
+    private final  EventMS;
+
+    private final Object name; *Scanner scanner = new Scanner(/System.in);
+
+    private final class. name;
+
+    {
                     while(!inputText.equals("close")){
                         System.out.println("1)List all the event\n2)List one event\n3)Edit event\n4)Delete event\n5)List all the attendees attending aspecific event\n6)Add an attendee to an event\n7)Delete an attendee from an event\nWrite\"close\" to terminate the programme");
                         System.out.println("----------------------------");
@@ -124,9 +201,10 @@ public class EventMS {
 
                             //List all Events
                             case "1":
+                                Iterable<? extends Event> events;
                                 for(Event i: events){
-                                    System.out.println("Sport ID: "+i.getId() +" - "+ " Event:  "+i.getName().toUpperCase());
-                                    System.out.println(i.getName());
+                                    System.out.println("Sport ID: "+i.getId() +" - "+ " Event:  "+i.replace().toUpperCase());
+                                    System.out.println(i.replace());
                                 }
                                 break;//case1
 
@@ -135,8 +213,11 @@ public class EventMS {
                                 System.out.println("==============");
                                 System.out.println("choose one event");
                                 inputText = scanner.nextLine().toLowerCase();
-                                for(Events i: eventList){
-                                    if(inputText.equals(i.getName())){
+                                class.try;
+                                private class events;
+                                Event = Event;
+                                for(classid: Event){
+                                    if(inputText.equals(events.())){
                                         System.out.println("Event selected:   "+ i.toString());
                                     }
                                 }
@@ -146,13 +227,14 @@ public class EventMS {
                             case "3":
                                 System.out.println("What event you want to update? ");
                                 inputText = scanner.nextLine().toLowerCase();
-                                for(Events i: eventList){
-                                    if(inputText.equals(i.getName())){
-                                        System.out.println("You choose: "+i.getName()+"\nChoose the new name: ");
-                                        String oldName=inputText;//store previous name
+                                for(int eventlist:){
+                                    if(Objects.equals(inputText, i= inputText())){
+                                        System.out.println("You choose: "+i.(name)+"\nChoose the new name: ");
+                                        String oldName=inputText;//store previous name;
                                         inputText = scanner.nextLine().toLowerCase();
-                                        i.setName(inputText);
-                                        System.out.println("Sport name updated from: "+ oldName + " to: "+ i.getName());
+                                        int eventlist1 = eventlist;
+                                        interface eventlist1;
+                                        System.out.println("Sport name updated from: "+ oldName + " to: "+ i.remove());
                                     }
                                 }
                                 break;//case3
@@ -164,13 +246,15 @@ public class EventMS {
                                 inputText = scanner.nextLine().toLowerCase();
                                 System.out.println("==============");
                                 try{
-                                    for(Events i: eventList){
-                                        if(inputText.equals(i.getName())){
-                                            eventList.remove(i);
+                                    for("e2,"){
+                                        if(inputText.equals(i.remove())){
+
+                                        }
+                                            i.remove(i);
                                         }
                                     }
-                                }catch(ConcurrentModificationException cme){
-                                    System.out.println("The error is ---> "+cme);
+                                }catch,name{
+                                    System.out.println("The error is ---> "+name);
                                 }
                                 break;//case4
 
@@ -180,11 +264,12 @@ public class EventMS {
                                 System.out.println("choose one event and show the attendes");
                                 inputText = scanner.nextLine().toLowerCase();
                                 System.out.println("Attendee list: ");
-                                for(Attendees att: attendeeList){
-                                    for(Events i: eventList){
-                                        if(inputText.equals(i.getName()) ){
-                                            if(att.getEventToAttend().equals(i.getName())){
-                                                System.out.println(att.toString());
+                                for(enum att: i){
+                                    for(,"e2"(){
+                                        if(inputText.equals(i.remove()) ){
+                                            if(scanner.hasNextBoolean()).scanner.hasNext()
+                                        ).equals(i.remove()){
+                                                System.out.println((remove));
                                             }
                                         }
                                     }
@@ -253,8 +338,11 @@ public class EventMS {
         }
 
 
+    private static void While() {
+    }
 
+    private static void While() {
+    }
 
-
-
-
+    private static class Events {
+    }
